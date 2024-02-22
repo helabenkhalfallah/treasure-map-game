@@ -50,9 +50,9 @@
     }
   },
   "testMatch": [
-    "<rootDir>/**/__tests__/**/*.js",
-    "<rootDir>/**/?(*-)(spec|test).js",
-    "<rootDir>/**/*-test.js"
+    "<rootDir>/**/__tests__/**/*.js?(x)",
+    "<rootDir>/**/*-(spec|test|Test).js?(x)",
+    "<rootDir>/**/*.(spec|test|Test).js?(x)"
   ],
   "testResultsProcessor": "jest-sonar-reporter",
   "testPathIgnorePatterns": [

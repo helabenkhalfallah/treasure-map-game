@@ -6,7 +6,8 @@ Treasure Map Game Using NodeJS (JavaScript)
 The Peruvian government has authorized adventurers seeking treasures to explore the 85,182 km2 of the Madre de Dios department. Treasure Map Game is used to track the movements and collections of treasures made by adventurers.
 
 Here is the map to be displayed by the Frontend:
-![Alt text](TREASURE_MAP_ADVENTURE.png)
+![alt text](TREASURE_MAP_ADVENTURE.png)
+
 
 The application consists of:
 - a frontend to display and download the movements and collections of treasures made by adventurers.
@@ -15,6 +16,8 @@ The application consists of:
 - a commons module that holds all transversal commons utils and core.
 
 🔴 **Note that for a primary need (static data display), no BFB module is added and no database is configured.**
+
+🔴 **An LRUCache is configured to replace a database.**
 
 ## Software architecture
 

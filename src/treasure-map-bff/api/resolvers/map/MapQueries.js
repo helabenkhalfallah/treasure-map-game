@@ -39,7 +39,7 @@ const downloadMapOutput = async () => {
     return mapOutput;
   } catch (error) {
     AppLogger.info(`[downloadMapOutput] error : ${error.message}`);
-    return ({});
+    return ('');
   }
 };
 

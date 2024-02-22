@@ -10,6 +10,7 @@ import { QueryCache, ReactQueryCacheProvider, } from 'react-query';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { ReactQueryDevtools, } from 'react-query-devtools';
 import { Hydrate, } from 'react-query/hydration';
+import ThemeProvider from '../commons/theme/ThemeProvider';
 
 const queryCache = new QueryCache({
   defaultConfig: {
@@ -23,7 +24,9 @@ const TreasureMapApp = ({ Component, pageProps, }) => (
   <ReactQueryCacheProvider queryCache={queryCache}>
     <Hydrate state={pageProps.dehydratedState}>
       <ReactQueryDevtools initialIsOpen={false} />
-      <Component {...pageProps} />
+      <ThemeProvider>
+        <Component {...pageProps} />
+      </ThemeProvider>
     </Hydrate>
   </ReactQueryCacheProvider>
 );

@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import ThemeProvider from './commons/theme/ThemeProvider';
 
 export const metadata = {
   title: 'TreasureMap (Game)',
@@ -11,7 +10,7 @@ function RootLayout({ children, }) {
   return (
     <html lang="en">
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        {children}
       </body>
     </html>
   );
