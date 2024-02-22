@@ -8,6 +8,9 @@ The Peruvian government has authorized adventurers seeking treasures to explore 
 Here is the map to be displayed by the Frontend:
 ![alt text](TREASURE_MAP_ADVENTURE.png)
 
+- Mountain are colored with yellow.
+- Treasure are colored with green.
+- Adventurers are colored with blue.
 
 The application consists of:
 - a frontend to display and download the movements and collections of treasures made by adventurers.
