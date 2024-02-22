@@ -1,5 +1,4 @@
-# treasure-map-game
-Treasure Map Game Using NodeJS (JavaScript)
+# Treasure Map Game Using NodeJS (JavaScript)
 
 ## Presentation of the project
 
