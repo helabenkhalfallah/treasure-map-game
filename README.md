@@ -81,5 +81,81 @@ The coupling between graphql and data sources is weak, which allows for easy swa
 
 ## How to install?
 
+### Install dependencies
+
+From the root folder:
+
+```js
+pnpm install
+```
+
+This will install all needed dependencies for main and sub modules.
 
 
+### Start all microservices in local mode:
+
+From the root folder:
+
+```js
+pnpm start:dev
+```
+
+This will use NX to call all `start:dev` scripts.
+
+In local mode, BFF and CMS module will use `nodemon`.
+
+### Start all microservices in production mode:
+
+From the root folder:
+
+```js
+pnpm start
+```
+
+This will use NX to call all `start` scripts.
+
+In production mode, BFF and CMS module will use `pm2`.
+
+### Lintify all modules
+
+From the root folder:
+
+```js
+pnpm lint
+pnpm lint:fix
+```
+
+This will use NX to call all `lint` or `lint:fix` scripts.
+
+
+### Testify all modules
+
+From the root folder:
+
+```js
+pnpm test
+pnpm test:update
+```
+
+This will use NX to call all `test` or `test:update` scripts.
+
+### Health checks
+
+All 'health check' routes are exposed through:
+
+```js
+baseUrl/health-checks
+```
+
+### Monitoring
+
+It's possible to monitor each microservice through an exposed route or pm2:
+
+```js
+baseUrl/monitoring
+
+// or
+pnpm monitor
+pnpm info
+pnpm logs
+```

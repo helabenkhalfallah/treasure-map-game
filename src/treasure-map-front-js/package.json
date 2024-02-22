@@ -12,9 +12,9 @@
     "url": "https://github.com/helabenkhalfallah/treasure-map-tool.git"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "start:dev": "next dev",
     "start": "next start",
+    "build": "next build",
     "lint": "eslint --cache --cache-location ./.eslintcache --ext js,jsx ./src",
     "lint:fix": "eslint --cache --cache-location ./.eslintcache --ext js,jsx ./src --fix",
     "analyze": "ANALYZE=true pnpm build",
