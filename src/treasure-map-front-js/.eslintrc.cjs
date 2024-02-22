@@ -27,7 +27,6 @@ module.exports = {
     render: true,
     mount: true,
   },
-  overrides: [],
   rules: {
     quotes: [
       'error',

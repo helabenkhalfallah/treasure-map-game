@@ -1,4 +1,5 @@
-import BundleAnalyzer from "@next/bundle-analyzer";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import BundleAnalyzer from '@next/bundle-analyzer';
 
 const withBundleAnalyzer = BundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
@@ -11,9 +12,8 @@ const nextConfig = {
     removeConsole: true,
   },
   transpilePackages: [
- 
+
   ],
-}
+};
 
 export default withBundleAnalyzer(nextConfig);
-
