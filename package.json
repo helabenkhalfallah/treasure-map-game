@@ -16,11 +16,12 @@
     "stop": "nx run-many --target=stop --all",
     "info": "pm2 list",
     "build": "nx run-many --target=build --all",
-    "husky:config": "node ./.husky/husky_setup.js",
     "lint": "nx run-many --target=lint --all",
     "lint:fix": "nx run-many --target=lint:fix --all",
     "test": "nx run-many --target=test --all",
-    "test:update": "nx run-many --target=test:update --all"
+    "test:update": "nx run-many --target=test:update --all",
+    "husky:config": "node ./.husky/husky_setup.js",
+    "postinstall": "pnpm husky:config"
   },
   "license": "ISC",
   "dependencies": {},
@@ -28,7 +29,7 @@
     "@nrwl/cli": "=14.4.2",
     "@nrwl/workspace": "=14.4.2",
     "fs-extra": "=11.1.0",
-    "husky": "=8.0.1",
+    "husky": "=8.0.3",
     "nx": "=14.4.2",
     "safe-publish-latest": "=1.1.4",
     "shelljs": "=0.8.5"
