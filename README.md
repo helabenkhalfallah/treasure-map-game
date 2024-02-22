@@ -10,6 +10,7 @@ Here is the map to be displayed by the Frontend:
 - Mountain are colored with yellow.
 - Treasure are colored with green.
 - Adventurers are colored with blue.
+- Clicking to "download" button, will download the output as a txt file.
 
 The application consists of:
 - a frontend to display and download the movements and collections of treasures made by adventurers.
