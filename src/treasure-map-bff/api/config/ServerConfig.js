@@ -14,8 +14,8 @@ const SERVER_ENV_CONFIGURATION = {
     apiPath: TREASURE_MAP_API_PATH,
     healthCheckPath: TREASURE_MAP_HEALTH_CHECK_PATH,
     monitoringPath: TREASURE_MAP_MONITORING_PATH,
-    databaseUri: '',
     serverTimeout: 900000, // milliseconds
+    cmsUrlPath: 'http://localhost:5000/treasure-map/cms/data-store/treasure-map',
   },
   development: {
     ssl: false,
@@ -24,8 +24,8 @@ const SERVER_ENV_CONFIGURATION = {
     apiPath: TREASURE_MAP_API_PATH,
     healthCheckPath: TREASURE_MAP_HEALTH_CHECK_PATH,
     monitoringPath: TREASURE_MAP_MONITORING_PATH,
-    databaseUri: '',
     serverTimeout: 900000, // milliseconds
+    cmsUrlPath: 'http://localhost:5000/treasure-map/cms/data-store/treasure-map',
   },
 };
 

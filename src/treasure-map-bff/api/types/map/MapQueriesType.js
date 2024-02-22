@@ -1,7 +1,7 @@
-/* eslint-disable max-len */
 const MapQueriesType = `
   type Query {
-    getMapQuery(): [MapType]
+    getMap: MapType
+    downloadMapOutput: String
   }
 `;
 

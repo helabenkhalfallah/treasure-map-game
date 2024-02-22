@@ -104,6 +104,19 @@ This will use NX to call all `start:dev` scripts.
 
 In local mode, BFF and CMS module will use `nodemon`.
 
+API documentation is accessible through this link:
+```js
+http://localhost:5001/treasure-map/graphql
+```
+
+Other available routes:
+```js
+http://localhost:5001/treasure-map/graphql
+http://localhost:5000/treasure-map/cms/monitoring
+http://localhost:5000/treasure-map/cms/health-checks
+http://localhost:5000/treasure-map/cms/data-store/treasure-map
+```
+
 ### Start all microservices in production mode:
 
 From the root folder:

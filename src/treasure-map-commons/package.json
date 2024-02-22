@@ -42,7 +42,8 @@
     "superagent": "=8.1.2",
     "winston": "=3.5.1",
     "winston-daily-rotate-file": "=4.6.0",
-    "winston-transport": "=4.5.0"
+    "winston-transport": "=4.5.0",
+    "lru-cache": "=10.2.0"
   },
   "jest-junit": {
     "output": "target/jest-sonar/test-report.junit.xml"

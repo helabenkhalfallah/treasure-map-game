@@ -1,15 +1,48 @@
 import React from 'react';
-import { Heading, } from '@chakra-ui/react';
+import {
+  Spinner,
+  Heading,
+} from '@chakra-ui/react';
 import { useGetMap, } from '../services/apis/useGetMap';
+import { useGetMountains, } from '../services/apis/useGetMountains';
+import { useGetTreasures, } from '../services/apis/useGetTreasures';
+import { useGetAdventurers, } from '../services/apis/useGetAdventurers';
+import { useMapOutput, } from '../services/apis/useMapOutput';
 
-function TreasureMapDashboardView() {
-  // eslint-disable-next-line no-unused-vars
-  const { data, isFetching, } = useGetMap();
+const TreasureMapDashboardView = () => {
+  const {
+    data: dataMap,
+    isFetching: isFetchingMap,
+  } = useGetMap();
+  const {
+    data: dataMountains,
+    isFetching: isFetchingMountains,
+  } = useGetMountains();
+  const {
+    data: dataTreasures,
+    isFetching: isFetchingTreasures,
+  } = useGetTreasures();
+  const {
+    data: dataAdventurers,
+    isFetching: isFetchingAdventurers,
+  } = useGetAdventurers();
+  const {
+    data: dataMapOutput,
+    isFetching: isFetchingMapOutput,
+  } = useMapOutput();
 
-  if (isFetching) return <div>Loading</div>;
+  if (isFetchingMap
+    || isFetchingMountains
+    || isFetchingTreasures
+    || isFetchingAdventurers
+  ) {
+    return (
+      <Spinner size="xl" />
+    );
+  }
 
   return <Heading as="h2">TreasureMapDashboardView</Heading>;
-}
+};
 
 // propsType (validation)
 TreasureMapDashboardView.propTypes = {};

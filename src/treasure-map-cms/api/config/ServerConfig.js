@@ -4,6 +4,7 @@ import {
 
 const TREASURE_MAP_API_PATH = '/treasure-map/cms';
 const TREASURE_MAP_HEALTH_CHECK_PATH = `${TREASURE_MAP_API_PATH}/health-checks`;
+const TREASURE_MAP_MONITORING_PATH = `${TREASURE_MAP_API_PATH}/monitoring`;
 
 const SERVER_ENV_CONFIGURATION = {
   production: {
@@ -11,6 +12,7 @@ const SERVER_ENV_CONFIGURATION = {
     port: 5000,
     apiPath: TREASURE_MAP_API_PATH,
     hostname: 'localhost',
+    monitoringPath: TREASURE_MAP_MONITORING_PATH,
     healthCheckPath: TREASURE_MAP_HEALTH_CHECK_PATH,
     serverTimeout: 900000, // milliseconds
     staticPath: '/api/data-store',
@@ -20,6 +22,7 @@ const SERVER_ENV_CONFIGURATION = {
     port: 5000,
     apiPath: TREASURE_MAP_API_PATH,
     hostname: 'localhost',
+    monitoringPath: TREASURE_MAP_MONITORING_PATH,
     healthCheckPath: TREASURE_MAP_HEALTH_CHECK_PATH,
     serverTimeout: 900000, // milliseconds
     staticPath: '/api/data-store',

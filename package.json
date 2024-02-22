@@ -12,6 +12,7 @@
     "modules:analyze:graph": "nx graph",
     "modules:analyze:graph:affected": "nx affected:graph",
     "modules:clear:cache": "nx reset",
+    "start:dev": "nx run-many --target=start:dev --all",
     "start": "nx run-many --target=start --all",
     "stop": "nx run-many --target=stop --all",
     "info": "pm2 list",

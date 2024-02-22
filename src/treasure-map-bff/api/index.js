@@ -13,9 +13,9 @@ import BodyParser from 'body-parser';
 import ExpressStatusMonitor from 'express-status-monitor';
 import TreasureMapTypes from './types/TreasureMapTypes.js';
 import TreasureMapResolvers from './resolvers/TreasureMapResolvers.js';
+import TreasureMapManager from './managers/TreasureMapManager.js';
 import {
   AppLogger,
-  DataBaseManager,
   ServerUtils,
 } from '@treasure-map/commons';
 import ServerConfig from './config/ServerConfig.js';
@@ -35,7 +35,6 @@ const {
   port,
   apiPath,
   healthCheckPath,
-  databaseUri,
 } = getCurrentConfig() || {};
 
 const app = Express();
@@ -94,10 +93,6 @@ app.get(healthCheckPath, (req, res) => {
   res.status(200).send('TreasureMap Sever is UP !');
 });
 
-// *********************************************** DataBase Config & Launch ***********************************************
-
-await DataBaseManager.connect(databaseUri);
-
 // *********************************************** Server Config & Launch ***********************************************
 
 await new Promise((resolve) => httpServer.listen({
@@ -107,3 +102,10 @@ await new Promise((resolve) => httpServer.listen({
 httpServer.timeout = getCurrentConfig()?.serverTimeout; // milliseconds
 
 AppLogger.info(`🚀 Server started at ${getCurrentConfig()?.serverUrl}`);
+
+// *********************************************** Fill Cache ***********************************************
+
+TreasureMapManager
+  .initCache()
+  .then(() => AppLogger.info('Initialising cache was done successfully !'))
+  .catch((error) => AppLogger.info(`An error was occurred while initialising the cache ${error.message} !`));

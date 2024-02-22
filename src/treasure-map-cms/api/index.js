@@ -1,5 +1,6 @@
 import path from 'path';
 import Express from 'express';
+import ExpressStatusMonitor from 'express-status-monitor';
 import {
   AppLogger,
   ServerUtils,
@@ -18,7 +19,10 @@ const {
 
 const {
   port,
+  ssl,
   serverTimeout,
+  hostname,
+  monitoringPath,
   healthCheckPath,
   staticPath,
 } = getCurrentConfig() || {};
@@ -30,6 +34,21 @@ const httpServer = createServer({
   config: getCurrentConfig(),
 });
 
+// *********************************************** Monitoring Endpoints ***********************************************
+
+app.use(ExpressStatusMonitor({
+  path: monitoringPath,
+  healthChecks: [
+    {
+      protocol: ssl ? 'https' : 'http',
+      host: hostname,
+      port,
+      path: healthCheckPath,
+      headers: {},
+    },
+  ],
+}));
+
 // *********************************************** Health Check Endpoints ***********************************************
 
 app.get(healthCheckPath, (req, res) => {
@@ -40,9 +59,9 @@ app.get(healthCheckPath, (req, res) => {
 
 const staticDirectory = path.join(__dirname, staticPath);
 
-app.get('/treasure-map/cms/data-store/map.json', (req, res) => {
+app.get('/treasure-map/cms/data-store/treasure-map', (req, res) => {
   AppLogger.info('Requestion map path');
-  res.sendFile(path.join(staticDirectory, 'map.json'));
+  res.sendFile(path.join(staticDirectory, 'TreasureMap.txt'));
 });
 
 // *********************************************** Server Config & Launch ***********************************************

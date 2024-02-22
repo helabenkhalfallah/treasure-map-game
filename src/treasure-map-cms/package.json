@@ -38,7 +38,8 @@
   },
   "dependencies": {
     "@treasure-map/commons": "^0.0.1",
-    "express": "=4.18.2"
+    "express": "=4.18.2",
+    "express-status-monitor": "=1.3.4"
   },
   "jest-junit": {
     "output": "target/jest-sonar/test-report.junit.xml"

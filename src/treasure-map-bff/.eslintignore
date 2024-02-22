@@ -17,6 +17,5 @@
 target
 jest
 **/front-js
-**/database
 **/logs
 **/ssl
