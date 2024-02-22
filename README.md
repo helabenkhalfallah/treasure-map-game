@@ -1,6 +1,6 @@
 # Treasure Map Adventure
 
-## Presentation of the project
+## Project presentation
 
 The Peruvian government has authorized adventurers seeking treasures to explore the 85,182 km2 of the Madre de Dios department. Treasure Map Game is used to track the movements and collections of treasures made by adventurers.
 
