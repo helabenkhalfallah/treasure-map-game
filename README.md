@@ -1,13 +1,16 @@
-# treasure-map-game
-Treasure Map Game Using NodeJS (JavaScript)
+# Treasure Map Adventure
 
-## Presentation of the project
+## Project presentation
 
 The Peruvian government has authorized adventurers seeking treasures to explore the 85,182 km2 of the Madre de Dios department. Treasure Map Game is used to track the movements and collections of treasures made by adventurers.
 
 Here is the map to be displayed by the Frontend:
 ![alt text](TREASURE_MAP_ADVENTURE.png)
 
+- Mountain are colored with yellow.
+- Treasure are colored with green.
+- Adventurers are colored with blue.
+- Clicking to "download" button, will download the output as a txt file.
 
 The application consists of:
 - a frontend to display and download the movements and collections of treasures made by adventurers.
